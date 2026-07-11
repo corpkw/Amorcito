@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>¡Nos vamos a Cusco Amorcito!</title>
+<title>Una sorpresa para ti ❤️</title>
 
 <style>
 
@@ -15,9 +15,61 @@
     font-family:'Segoe UI',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#f5f5f5;
-    color:#333;
+    overflow-x:hidden;
+}
+
+/* Pantalla inicial */
+
+#inicio{
+    height:100vh;
+    background:linear-gradient(135deg,#ff6b81,#ff9a9e);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.caja{
+    animation:aparecer 1.5s;
+}
+
+.caja h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.caja p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+button{
+    background:white;
+    color:#e91e63;
+    border:none;
+    padding:18px 35px;
+    border-radius:40px;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* Pantalla del viaje */
+
+#viaje{
+    display:none;
 }
 
 .hero{
@@ -30,91 +82,201 @@ body{
     padding:20px;
 }
 
-.hero div{
+.hero .texto{
     background:rgba(0,0,0,.55);
-    padding:30px;
+    padding:35px;
     border-radius:20px;
     color:white;
-    max-width:700px;
+    animation:subir 1.2s;
 }
 
 .hero h1{
     font-size:55px;
-    margin-bottom:15px;
 }
 
 .hero p{
+    margin-top:15px;
     font-size:22px;
 }
 
-.indicacion{
-    margin-top:20px;
-    font-size:18px;
-    opacity:.9;
+.flecha{
+    margin-top:25px;
+    font-size:30px;
+    animation:rebote 1.2s infinite;
 }
 
 .pasaje{
-    padding:50px 20px;
-    display:flex;
-    justify-content:center;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.pasaje h2{
+    color:#2e7d32;
+    margin-bottom:25px;
+    font-size:36px;
 }
 
 .pasaje img{
-    width:100%;
-    max-width:800px;
+    width:95%;
+    max-width:850px;
     border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
 }
 
-/* Diseño para celulares */
-
-@media (max-width:768px){
-
-.hero h1{
-    font-size:34px;
+.mensaje{
+    max-width:900px;
+    margin:50px auto;
+    padding:0 20px;
+    text-align:center;
+    font-size:24px;
+    line-height:1.7;
 }
 
-.hero p{
-    font-size:18px;
-}
-
-.hero div{
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
     padding:25px;
 }
 
-.indicacion{
-    font-size:16px;
+/* Animaciones */
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes subir{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes rebote{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+}
+
+/* Celulares */
+
+@media(max-width:768px){
+
+.caja h1{
+font-size:32px;
+}
+
+.caja p{
+font-size:18px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.pasaje h2{
+font-size:28px;
+}
+
+.mensaje{
+font-size:20px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
+<section id="inicio">
+
+<div class="caja">
+
+<h1>❤️ Tengo una sorpresa para ti ❤️</h1>
+
+<p>Hay algo muy especial que quiero mostrarte...</p>
+
+<button onclick="mostrarViaje()">
+Abrir sorpresa ✨
+</button>
+
+</div>
+
+</section>
+
+<section id="viaje">
+
 <div class="hero">
 
-    <div>
+<div class="texto">
 
-        <h1>🏔️ ¡Nos vamos a Cusco Amorcito Pechocha!</h1>
+<h1>🏔️ ¡Nos vamos a Cusco, amorcito! ❤️</h1>
 
-        <p>Una aventura inolvidable nos espera. ❤️</p>
+<p>Prepárate para vivir una aventura inolvidable juntos.</p>
 
-        <div class="indicacion">
-            ↓ Desliza para ver tu sorpresa ↓
-        </div>
+<div class="flecha">
+⬇️
+</div>
 
-    </div>
+</div>
 
 </div>
 
 <div class="pasaje">
 
-    <img src="img/pasaje.jpg" alt="Pasaje de viaje">
+<h2>🎫 Nuestro Pasaje</h2>
+
+<img src="img/pasaje.jpg" alt="Pasaje">
 
 </div>
+
+<div class="mensaje">
+
+<p>
+Desde hace tiempo soñaba con compartir este viaje contigo.
+Espero que cada momento en Cusco se convierta en un recuerdo que guardemos para siempre. ❤️
+<br><br>
+<strong>¡Empieza la cuenta regresiva! ✈️🏔️</strong>
+
+</p>
+
+</div>
+
+<footer>
+
+Hecho con mucho ❤️ para ti.
+
+</footer>
+
+</section>
+
+<script>
+
+function mostrarViaje(){
+
+document.getElementById("inicio").style.display="none";
+document.getElementById("viaje").style.display="block";
+
+window.scrollTo(0,0);
+
+}
+
+</script>
 
 </body>
 </html>
